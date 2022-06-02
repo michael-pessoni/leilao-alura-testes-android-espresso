@@ -8,18 +8,19 @@ import br.com.alura.leilao.model.Leilao;
 import retrofit2.Call;
 import retrofit2.Response;
 
-public class TesteWebClient extends WebClient {
+public class TesteWebClient extends WebClient{
 
     private final TesteService service;
 
-    public TesteWebClient() {
-        this.service = new TesteRetrofitInicializador().getTestService();
+    public TesteWebClient(){
+        this.service =
+                new TesteRetrofitInicializador().getTesteService();
     }
 
     public Leilao salva(Leilao leilao) throws IOException {
         Call<Leilao> call = service.salva(leilao);
         Response<Leilao> resposta = call.execute();
-        if(temDados(resposta)) {
+        if(temDados(resposta)){
             return resposta.body();
         }
         return null;
@@ -30,4 +31,5 @@ public class TesteWebClient extends WebClient {
         Response<Void> resposta = call.execute();
         return resposta.isSuccessful();
     }
+
 }

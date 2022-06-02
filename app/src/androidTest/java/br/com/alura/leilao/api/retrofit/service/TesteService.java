@@ -13,4 +13,5 @@ public interface TesteService {
 
     @GET("reset")
     Call<Void> limpaBancoDeDados();
+
 }

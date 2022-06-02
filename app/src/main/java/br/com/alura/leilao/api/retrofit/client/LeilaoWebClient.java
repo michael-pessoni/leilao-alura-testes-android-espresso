@@ -1,6 +1,5 @@
 package br.com.alura.leilao.api.retrofit.client;
 
-import java.io.IOException;
 import java.util.List;
 
 import br.com.alura.leilao.api.retrofit.RetrofitInicializador;
@@ -11,7 +10,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LeilaoWebClient extends WebClient {
+public class LeilaoWebClient extends WebClient{
 
     private final LeilaoService service;
 
@@ -52,7 +51,5 @@ public class LeilaoWebClient extends WebClient {
             }
         });
     }
-
-
 
 }
